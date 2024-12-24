@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="slider()">
+<nav class="navbar navbar-expand-lg bg-light" id="navbar">
+  <div class="container-fluid" >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link " aria-current="page" href="#"> <button class="btn">Home</button></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="#">
+            <button class="btn">Our Team</button>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="#">
+            <button class="btn">Gallery</button>
+          </a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            <button class="btn">Department</button>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item " href="#">Gym</a></li>
+            <li><a class="dropdown-item " href="#">Yoga</a></li>
+            <li><a class="dropdown-item " href="#">Diet</a></li>
+          </ul>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link " aria-current="page" href="#"> <button class="btn btn2" id = "Registration">Registration</button></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link " aria-current="page" href="#"> <button class="btn btn2">Log-in</button></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="banner" >
+  <div class="slider" style=" display: flex; justify-content: center">
+      <img src="images/Gym1.jpg" id="slideImg">
+  </div>
+  <div class="overlay"> </div>
+</div>
+<script >
+var slideImg = document.getElementById("slideImg");
+
+var image = [
+    "images/Gym1.jpg","images/food1.jpg","images/Yoga1.jpg",
+    "images/Gym2.jpg","images/food2.jpg","images/Yoga2.jpg",
+    "images/Gym3.jpg","images/food3.jpg","images/Yoga3.jpg"
+];
+var len = image.length;
+var i = 0;
+function  slider(){
+    if(i > len-1){
+      i = 0;
+    }
+    slideImg.src = image[i];
+    i++;
+    setTimeout('slider()',5000);
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

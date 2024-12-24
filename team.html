@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team</title>
+  <style>
+    /* Reset some default styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Overall page styling */
+    body {
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("images/iitg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Position the Home anchor at the top-left */
+    .home-link {
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      font-size: 1.2em;
+      color: white;
+      text-shadow: #fc0 1px 0 10px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .home-link:hover {
+      color: yellow;
+    }
+
+    /* Content container */
+    .content {
+      position: relative;
+      z-index: 1;
+      border-radius: 8px;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    /* Team Section styling */
+    .team-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: white;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      text-shadow: #fc0 1px 0 10px;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      /* margin-bottom: 50px; */
+    }
+
+    /* Team Member Card */
+    .team-member {
+      width: 380px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .team-member h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: aliceblue;
+      font-family: "Times New Roman", Times, serif;
+      text-shadow: #fc0 1px 0 10px;
+    }
+
+    .team-member p {
+      font-size: 1em;
+      color: white;
+      text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+
+    /* LinkedIn icon styling */
+    .linkedin-icon {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .linkedin-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Professor Guidance Section */
+    .guidance-section {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .guidance-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .guidance-section h2,
+    .guidance-section p {
+      color: white;
+      text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+      font-family: "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Home Anchor Link -->
+  <a href="index.php" class="home-link">Home</a>
+
+  <div class="content">
+    <section class="team-section">
+      <h1>The Visionaries Behind FusionFit360</h1>
+      <br />
+      <div class="team-container">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+          <img src="images/pratham.jpg" alt="Team Member 1" />
+          <h2>Pratham Doiphode</h2>
+          <p>232123020</p>
+          <p>MSc Mathematics & Computing</p>
+          <p>IIT Guwahati</p>
+          <a href="https://www.linkedin.com/in/prathamdoiphode/" class="linkedin-icon" target="_blank">
+            <img src="images/linkedin.jpg" alt="LinkedIn Icon" />
+          </a>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member">
+          <img src="images/priyanshu.jpg" alt="Team Member 2" />
+          <h2>Priyanshu Kumar</h2>
+          <p>232123118</p>
+          <p>MSc Mathematics</p>
+          <p>IIT Guwahati</p>
+          <a href="https://www.linkedin.com/in/priyanshu-kumar-8525aa273/" class="linkedin-icon" target="_blank">
+            <img src="images/linkedin.jpg" alt="LinkedIn Icon" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Professor Guidance Section -->
+      <div class="guidance-section">
+        <img src="images/ashok.jpg" alt="Prof. Ashok" />
+        <h2>Mentored by Prof. Ashok Singh Sairam</h2>
+        <p>Department of Mathematics</p>
+        <p>IIT Guwahati</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

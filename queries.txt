@@ -1,0 +1,47 @@
+CREATE TABLE Department(
+   did int PRIMARY KEY,
+    dname varchar(10),
+    fee int
+);
+
+CREATE TABLE Customer(
+	Cid varchar(5) PRIMARY KEY,
+    Fname varchar(40) NOT null,
+    Lname varchar(40),
+    Gender char(1),
+    Age int,
+    Height float,
+    Weight float,
+    Mob char(10),
+    Log_id varchar(50) NOT null,
+    pswd varchar(15) NOT null  
+);
+CREATE TABLE Staff(
+	Staff_id varchar(5) PRIMARY KEY,
+    SFname varchar(40) NOT null,
+    SLname varchar(40),
+    Gender char(1),
+    Salary float,
+    Mob_no char(10),
+   	Did int,
+    FOREIGN KEY (Did) REFERENCES Department(Did)
+);
+
+CREATE TABLE Trial(
+	Mid int AUTO_INCREMENT PRIMARY KEY,
+    did int,
+    start_date varchar(20),
+    cid varchar(5),
+    FOREIGN KEY (Cid) REFERENCES Customer(Cid)
+);
+CREATE TABLE facility(
+	fid int AUTO_INCREMENT PRIMARY KEY,
+    facility varchar(30),
+    did int,
+    cid varchar(5),
+    FOREIGN KEY (cid) REFERENCES Customer(Cid)
+);
+CREATE TABLE Admin(
+	email varchar(50) PRIMARY KEY,
+    password varchar(20)
+);
